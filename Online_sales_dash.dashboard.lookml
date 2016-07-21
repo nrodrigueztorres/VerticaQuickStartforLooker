@@ -5,7 +5,6 @@
     
 
   filters:
-  
   - name: date
     title: "Sales period"
     type: date_filter
@@ -28,7 +27,6 @@
     
     
   elements:
-
   - name: online_sales_total 
     title: "Online Sales Total"
     type: single_value
@@ -76,9 +74,12 @@
     x_axis_scale: auto
     point_style: none
     interpolation: linear
+   
+   
     
-  - name: online_sales_by_year
-    title: 'Online Sales Year over Year Comparison'
+    
+  - name: online_sales_by_year2
+    title: 'Online Sales Performance (YoY)'
     type: looker_line
     model: vmart1
     explore: online_sales_fact
@@ -92,7 +93,6 @@
       date: date_dimension_sales.date_date
       customer_type: customer_dimension.customer_type
       measure_type: online_sales_fact.measure_type
-    sorts: [date_dimension_sales.calendar_year_quarter]
     limit: 500
     width: 
     height:
@@ -107,9 +107,7 @@
     y_axis_min:
     y_axis_max:
     hide_points: true
-    colors: ['#635189','#1ea8df','#49cec1','#e9b404','#dc7350','#ed6168']
-   
-    
+    colors: ['#353b49','#776fdf','#49cec1','#e9b404','#dc7350','#ed6168']    
     
   - name: regional_sales
     title: "Regional Online Sales"

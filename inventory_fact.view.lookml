@@ -29,6 +29,7 @@
   - measure: average_qty_in_stock
     type: average
     sql: ${TABLE}.qty_in_stock
+    value_format: '#,##0.00'
 
   - measure: max_qty_in_stock
     type: max
